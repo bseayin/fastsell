@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>订单备注信息</title>
+<link rel="stylesheet" type="text/css" href="/sell/order/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/sell/order/css/base.css">
+<link rel="stylesheet" href="/sell/order/css/order_notes.css">
+</head>
+<body>
+<div class="incomplete_order">
+	<p>代付款</p>
+    <p>支付完成后订单才会下到厨房呦</p>
+</div>
+<div class="main">
+    <div class="invoice">
+        <div id="tfid">已点3个菜品</div>
+        <span id="tableid"></span>
+    </div>
+    <ul class="food_list">
+
+    </ul>
+    <div class="invoice">
+    	<div>
+            <span>就餐方式：</span>
+            <select class="myselect">
+                <option value="0">堂吃</option>
+
+            </select>
+        </div>
+
+    </div>
+
+
+
+    <div class="total_price">合计：<span id="famtid"></span></div>
+</div>
+
+<div class="btn">
+    <button class="btn1">取消订单</button>
+    <a href="/sell/order/payment.html"><button class="btn2">付款</button></a>
+</div>
+<script src="/sell/order/js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".remark").focus(function(){
+		$(this).parent().height("100px");
+		$(this).addClass("tefocus");
+	})
+	$(".remark").blur(function(){
+		$(this).parent().height("40px");
+		$(this).removeClass("tefocus");
+	})
+})
+</script>
+
+<script src="/sell/js/order_notes.js"></script>
+</body>
+</html>
