@@ -1,0 +1,80 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font-size:14px;
+}
+.incomplete_order{
+	display:flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content:center;
+	height:150px;
+	background: #f63;
+	width:100%;
+	color:#fff;
+	padding:15px 10%;
+}
+.incomplete_order p:nth-child(1){
+	background:url(../images/success_icon.png) left center no-repeat;
+	background-size:20px;
+	padding-left:25px;
+	font-size:18px;
+	height:25px;
+	line-height:26px;
+}
+.incomplete_order p:nth-child(2){
+	font-size:24px;
+	margin: 14px 0;
+}
+.incomplete_order a{
+	padding:5px 20px;
+	border:1px solid #eaeaea;
+	border-radius:4px;
+	display:flex;
+	color:#fff;
+}
+.main_info{
+	background:#fff;
+	width:100%;
+	padding:10px;
+	margin-bottom:10px;
+}
+.hang{
+	display:flex;
+	justify-content:space-between;
+	align-items: center;
+	width:100%;
+	border:none;
+}
+.hang span:nth-child(2){
+	color:#999;
+}
+.invoice{
+	background:#fff;
+	width:100%;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:10px;
+	height:60px;
+}
+.invoice span:nth-child(1){
+	padding-left:25px;
+	background:url(../images/invoice.png) left center no-repeat;
+	background-size:20px;
+}
+.invoice span:nth-child(2){
+	border:1px solid #f63;
+	height:35px;
+	line-height:35px;
+	width:100px;
+	text-align:center;
+	color:#f63;
+	border-radius:4px;
+}
+
+
+
+
+
+

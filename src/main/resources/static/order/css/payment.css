@@ -1,0 +1,70 @@
+body {
+	font-size: 14px;
+}
+select:focus{
+	outline:none;
+}
+.pay_top{
+	display:flex;
+	align-items: center;
+	flex-wrap:wrap;
+	justify-content: center;
+	flex-direction: column;
+	padding:5% 0;
+}
+.invoice {
+    width: 100%;
+    display: flex;
+    align-items: center;
+	height:40px;
+    line-height: 40px;
+    justify-content: space-between;
+    padding: 0 10px;
+	border-bottom:1px solid #f4f4f4;
+    background: #fff;
+	margin-bottom:10px;
+}
+.pay_top p:first-child{
+	font-size:18px;
+}
+.pay_top p:last-child{
+	font-size:24px;
+	font-weight:bold;
+	letter-spacing:1px;
+	line-height:2;
+}
+.payment{
+	height:40px;
+	width:40px;
+	background:url(../images/checkbox_n.png) center center no-repeat;
+	background-size:20px 20px;
+}
+.payment:checked{
+	background:url(../images/checkbox_y.png) center center no-repeat;
+	background-size:20px 20px;
+}
+.wxlogo{
+	padding-left:30px;
+	background:url(../images/wxlogo.png) left center no-repeat;
+	background-size:25px;
+}
+.zfblogo{
+	padding-left:30px;
+	background:url(../images/zfblogo.png) left center no-repeat;
+	background-size:25px;
+}
+.paydiv{
+	width:100%;
+	padding:0 10px;
+	margin:30px 0;
+}
+.paybtn{
+	width:100%;
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	border-radius:4px;
+	color:#fff;
+	font-size:16px;
+	background:#f63;
+}

@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>评价</title>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" href="css/evaluate.css">
+</head>
+<body>
+<div class="fixed-cont">
+    <section class="assess">
+        <textarea rows="7" placeholder="有什么想对我说的，写在这里吧"></textarea>
+        <ul>
+            <li>评价</li>
+            <li class="assess-right">
+                <div>
+                    <input type="radio" name="radio" value="radio1"/>
+                    <img src="images/hua.png"/>
+                </div>
+                <div>
+                    <input type="radio" name="radio" value="radio2"/>
+                    <img src="images/huah.png"/>
+                </div>
+                <div>
+                    <input type="radio" name="radio" value="radio3"/>
+                    <img src="images/huae.png">
+                </div>
+            </li>
+        </ul>
+    </section>
+    <section class="main">
+        <div class="main-wrap">
+            <div class="revtit">综合评分：</div>
+            <div id="mydiv1" currentIndex="0" class="mydiv">
+                <ul class="star_ul">
+                    <li num="1"><img src="images/star_empty.png" class="xing_hui"/></li>
+                    <li num="2"><img src="images/star_empty.png" class="xing_hui"/></li>
+                    <li num="3"><img src="images/star_empty.png" class="xing_hui"/></li>
+                    <li num="4"><img src="images/star_empty.png" class="xing_hui"/></li>
+                    <li num="5"><img src="images/star_empty.png" class="xing_hui"/></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-wrap">
+            <div class="revtit">味道评分：</div>
+            <div id="mydiv2" currentIndex="0" class="mydiv">
+                <ul class="star_ul">
+                    <li num="1"><img src="images/star_empty.png" class="xing_hui"/></li>
+                    <li num="2"><img src="images/star_empty.png" class="xing_hui"/></li>
+                    <li num="3"><img src="images/star_empty.png" class="xing_hui"/></li>
+                    <li num="4"><img src="images/star_empty.png" class="xing_hui"/></li>
+                    <li num="5"><img src="images/star_empty.png" class="xing_hui"/></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-wrap">
+            <div class="revtit">环境评分：</div>
+            <div id="mydiv3" currentIndex="0" class="mydiv">
+                <ul class="star_ul">
+                    <li num="1"><img src="images/star_empty.png" class="xing_hui"/></li>
+                    <li num="2"><img src="images/star_empty.png" class="xing_hui"/></li>
+                    <li num="3"><img src="images/star_empty.png" class="xing_hui"/></li>
+                    <li num="4"><img src="images/star_empty.png" class="xing_hui"/></li>
+                    <li num="5"><img src="images/star_empty.png" class="xing_hui"/></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</div>
+<footer class="fixed-footer">
+    <div class="nmpj">
+        <input type="checkbox" id="ass" />
+        <label for="ass" onselectstart="return false">匿名评价</label>
+    </div>
+    <button>发表评价</button>
+</footer>
+<script src="http://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+<script type="text/javascript">
+$(".assess-footer ul li label").on('touchstart',function(){
+    if($(this).hasClass('assd')){
+        $(".assess-footer ul li label").removeClass("assd")
+    }else{
+        $(".assess-footer ul li label").addClass("assd")
+    };
+});
+    
+//匿名评价
+var isclick = false;
+function change(mydivid,num) {
+    if (!isclick) {
+        var tds = $("#"+mydivid+" ul li");
+        for (var i = 0; i < num; i++) {
+            var td = tds[i];
+            $(td).find("img").attr("src","images\/star_full.png");
+        }
+        var tindex = $("#"+mydivid).attr("currentIndex");
+        tindex = tindex==0?0:tindex+1;
+        for (var j = num; j < tindex; j++) {
+            var td = tds[j];
+            $(td).find("img").attr("src","images\/star_empty.png");
+        }
+        $("#"+mydivid).attr("currentIndex",num);
+    }
+}
+function repeal(mydivid,num) {
+    if (!isclick) {
+        var tds = $("#"+mydivid+" ul li");
+        var tindex = $("#"+mydivid).attr("currentIndex");
+        tindex = tindex==0?0:tindex+1;
+        for (var i = tindex; i < num; i++) {
+            var td = tds[i];
+            $(td).find("img").attr("src","images\/star_empty.png");
+        }
+        $("#"+mydivid).attr("currentIndex",num);
+    }
+}
+function change1(mydivid,num) {
+    if (!isclick) {
+        change(mydivid,num);
+
+    }
+    else {
+        alert("Sorry,You had clicked me!");
+    }
+}
+$(function(){
+    initEvent('mydiv1');
+    initEvent('mydiv2');
+    initEvent('mydiv3');
+});
+function initEvent(mydivid) {
+    var tds = $("#"+mydivid+" ul li");
+    for (var i = 0; i < tds.length; i++) {
+        var td = tds[i];
+        $(td).on('mouseover',function(){var num = $(this).attr("num");change(mydivid,num);});
+        $(td).on('click',function(){var num = $(this).attr("num");change1(mydivid,num);});
+    }
+}
+</script>
+</body>
+</html>

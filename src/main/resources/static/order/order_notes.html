@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+<title>订单备注信息</title>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/base.css">
+<link rel="stylesheet" href="css/order_notes.css">
+</head>
+<body>
+<div class="incomplete_order">
+	<p>代付款</p>
+    <p>支付完成后订单才会下到厨房呦</p>
+</div>
+<div class="main">
+    <div class="invoice">
+        <div>已点3个菜品</div>
+        <span>桌号：23</span>
+    </div>
+    <ul class="food_list">
+    	<li class="food_li">
+        	<img src="images/demo.jpg" class="food_li_left">
+            <div class="food_li_middle">
+            	<div>
+                    <p>麻婆豆腐</p>
+                    <p>口味：麻辣</p>
+                    <p>×3</p>
+                </div>
+                <div class="food_li_price">¥30</div>
+            </div>
+        </li>
+        <li class="food_li">
+        	<img src="images/demo.jpg" class="food_li_left">
+            <div class="food_li_middle">
+            	<div>
+                    <p>麻婆豆腐</p>
+                    <p>口味：麻辣</p>
+                    <p>×3</p>
+                </div>
+                <div class="food_li_price">¥30</div>
+            </div>
+        </li>
+        <li class="food_li">
+        	<img src="images/demo.jpg" class="food_li_left">
+            <div class="food_li_middle">
+            	<div>
+                    <p>麻婆豆腐</p>
+                    <p>口味：麻辣</p>
+                    <p>×3</p>
+                </div>
+                <div class="food_li_price">¥30</div>
+            </div>
+        </li>
+    </ul>
+    <div class="invoice">
+    	<div>
+            <span>就餐方式：</span>
+            <select class="myselect">
+                <option value="0">堂吃</option>
+                <option value="1">外带</option>
+            </select>
+        </div>
+        <div>
+            <div class="tableware_number">餐具份数：</div>
+            <select class="myselect">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+            </select>
+        </div>
+    </div>
+    <div class="invoice">
+        <div>备注</div>
+        <textarea class="remark" placeholder="请输入您想说的"></textarea>
+    </div>
+    <div class="invoice total">
+        <div>菜品小计：</div>
+        <div class="food_price">¥ 56.6</div>
+    </div>
+    <div class="invoice">
+        <div>餐具小计：</div>
+        <div class="food_price">¥ 4</div>
+    </div>
+    <div class="total_price">合计：<span>¥ 60.6</span></div>
+</div>
+<div class="pay_notice">15分钟内未支付系统将自动取消订单</div>
+<div class="btn">
+    <button class="btn1">取消订单</button>
+    <a href="payment.html"><button class="btn2">付款</button></a>
+</div>
+<script src="js/jquery.min.js"></script>
+<script>
+$(function(){
+	$(".remark").focus(function(){
+		$(this).parent().height("100px");
+		$(this).addClass("tefocus");
+	})
+	$(".remark").blur(function(){
+		$(this).parent().height("40px");
+		$(this).removeClass("tefocus");
+	})
+})
+</script>
+</body>
+</html>

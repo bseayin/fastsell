@@ -1,0 +1,159 @@
+body {
+	font-size: 14px;
+}
+select:focus{
+	outline:none;
+}
+.incomplete_order{
+	height:80px;
+	align-items: center;
+	background: url(../images/shalou.png) 90% center no-repeat #f63;
+	width:100%;
+	color:#fff;
+	padding:19px 10%;
+}
+.success_back{
+	background: url(../images/jycg.png) 90% center no-repeat #f63;
+}
+.incomplete_order p:first-child{
+	font-size:18px;
+}
+.main{
+	padding:10px;
+}
+.invoice {
+    width: 100%;
+    display: flex;
+    align-items: center;
+	height:40px;
+    line-height: 40px;
+    justify-content: space-between;
+    padding: 0 10px;
+	border-bottom:1px solid #f4f4f4;
+    background: #fff;
+}
+.invoice .myselect{
+	border:none;
+	height:30px;
+	padding:0 5px;
+	line-height:30px;
+}
+.invoice textarea{
+	height:30px;
+	padding:0 10px;
+	line-height:30px;
+}
+.invoice textarea.tefocus{
+	margin:10px 0;
+	height:80px;
+	width:80%;
+	border:1px solid #e2e2e2;
+}
+.beizhu{
+	height:auto;
+}
+.beizhu div{
+	width:20%;
+}
+.beizhu span{
+	padding:5px 0;
+	width:80%;
+	line-height:20px;
+}
+.total{
+	margin-top:10px;
+}
+.total_price{
+	text-align:right;
+	padding:0 10px;
+	line-height: 40px;
+	background: #fff;
+	width: 100%;
+	height:40px;
+}
+.total_price span{
+	font-size:18px;
+	color:#f63;
+}
+.food_price{
+	color:#f63;
+}
+.btn {
+	width: 100%;
+	display:flex;
+	justify-content:flex-end;
+	color: #f63;
+	height:60px;
+	align-items:center;
+}
+.btn button{
+	height:40px;
+	line-height:40px;
+	width:100px;
+	text-align:center;
+	color:#f63;
+	border-radius:4px;
+	margin-right:10px;
+}
+.btn button.btn1{
+	background:#fff;
+	color:#333;
+	border:1px solid #B8B8B8;
+}
+.btn button.btn2{
+	background:#f63;
+	color:#fff;
+	border:1px solid #f63;
+}
+.pay_notice{
+	height:40px;
+	line-height:40px;
+	background:#FDF2E0;
+	color:#f63;
+	width:100%;
+	text-align:center;
+}
+.tableware_number{
+	float:left;
+}
+.food_list{
+	display:flex;
+	width:100%;
+	background:#fff;
+	flex-wrap:wrap;
+	padding: 5px 0;
+	border-bottom: 1px solid #f4f4f4;
+}
+.food_li {
+    height: 75px;
+    margin: 5px 10px;
+    width: 100%;
+    position: relative;
+    background: #f7f7f7;
+}
+.food_li_left,.food_li_middle,.food_li_right{
+	float:left;
+}
+.food_li_left{
+	width:55px;
+	height:55px;
+	overflow:hidden;
+	position:absolute;
+	left:10px;
+	top:10px;
+}
+.food_li_middle {
+    width: 100%;
+    padding: 10px 10px 10px 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+.food_li_middle p{
+	font-size:12px;
+	line-height:1.5;
+}
+.food_li_middle p:nth-child(1){
+	font-size:14px;
+}
